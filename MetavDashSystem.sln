@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetavDash", "MetavDash\MetavDash.csproj", "{09E705CC-ACC3-4AE9-8A4F-6196638B57CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{360229BE-CD1F-4DD4-8ECD-50A88CB0E708}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09E705CC-ACC3-4AE9-8A4F-6196638B57CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E705CC-ACC3-4AE9-8A4F-6196638B57CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E705CC-ACC3-4AE9-8A4F-6196638B57CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E705CC-ACC3-4AE9-8A4F-6196638B57CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{360229BE-CD1F-4DD4-8ECD-50A88CB0E708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360229BE-CD1F-4DD4-8ECD-50A88CB0E708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360229BE-CD1F-4DD4-8ECD-50A88CB0E708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360229BE-CD1F-4DD4-8ECD-50A88CB0E708}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {534840D7-E875-4158-A598-83B9B6583A2C}
+	EndGlobalSection
+EndGlobal

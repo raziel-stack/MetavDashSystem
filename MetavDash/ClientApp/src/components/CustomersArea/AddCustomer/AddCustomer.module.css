@@ -1,0 +1,6 @@
+.AddCustomer {}
+
+.AddCustomerForm{
+    display: flex;
+    align-items: baseline;
+}
