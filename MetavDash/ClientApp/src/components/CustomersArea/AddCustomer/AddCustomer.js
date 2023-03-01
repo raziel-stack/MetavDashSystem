@@ -19,9 +19,8 @@ const AddCustomer = (props) => {
         
         e.preventDefault();
 
-        alert('hi')
 
-        if(fullName != '' && birthDate != '' && IdNum != ''){
+        if(fullName != '' && birthDate != '' && IdNum != '' && fullNameValid && IdNumValid && birthDateValid){
 
             let formData = new FormData();   
 
@@ -34,6 +33,10 @@ const AddCustomer = (props) => {
                 body: formData
             }).then(r => r.json()).then(r => {
                 if(r.success){
+                    setFullName('');
+                    setBirthDate('');
+                    setIdNum('');
+
                     props.refreshData();
                 }else{
                     alert(r);
@@ -62,23 +65,28 @@ const AddCustomer = (props) => {
       
               <TextField
                 id="fullName"
+                helperText={(!fullNameValid && "The pattern must by letters only maximum 19.")}
+                value={fullName}
                 label="Full Name"
                 error={!fullNameValid}
-                onChange={(e)=> { if(/^(?=^.{0,19}$)[A-Za-zא-ת ]+$/.test(e.target.value)) {setFullName(e.target.value); setFullNameValid(true);  }else{setFullNameValid(false);} ; }}
+                onChange={(e)=> {  setFullName(e.target.value); if(/^(?=^.{0,19}$)[A-Za-zא-ת ]+$/.test(e.target.value)) {setFullNameValid(true);  }else{setFullNameValid(false);} ; }}
               />
 
                 <TextField
                 id="IdNum"
+                value={IdNum}
                 label="Id Num"
                 error={!IdNumValid}
-                onChange={(e)=> { if(/\b[0-9]{9}\b/.test(e.target.value)) {setIdNum(e.target.value); setIdNumValid(true);  }else{setIdNumValid(false) ; } ; }}
+                onChange={(e)=> { setIdNum(e.target.value); if(/\b[0-9]{9}\b/.test(e.target.value)) { setIdNumValid(true);  }else{setIdNumValid(false) ; } ; }}
               />
 
                 <TextField
                 id="birthDate"
+                helperText={(!birthDateValid && "The pattern must by dd/M/yyyy")}
+                value={birthDate}
                 label="Birth Date"
                 error={!birthDateValid}
-                onChange={(e)=> { if(/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/.test(e.target.value)) {setBirthDate(e.target.value); setBirthDateValid(true);  }else{setBirthDateValid(false)} ; }}
+                onChange={(e)=> {setBirthDate(e.target.value); if(/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/.test(e.target.value)) { setBirthDateValid(true);  }else{setBirthDateValid(false)} ; }}
               />
              
             
